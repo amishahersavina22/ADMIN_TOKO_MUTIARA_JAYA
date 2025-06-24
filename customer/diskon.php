@@ -25,27 +25,28 @@ require_once "../templat/sidebar.php";
     </div>
     <div class="card-body">
      <table class="table table-hover" id="datatablesSimple">
-        <thead>
-            <tr>
-                <th scope="col">No</th>
-                <th scope="col"><center>NAMA</center></th>
-                <th scope="col"><center>NAMA BARANG</center></th>
-                <th scope="col"><center>HARGA</center></th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php
-            $no =1;
-            $querydiskon =mysqli_query($conn, "SELECT * FROM view2");
-            while ($data =mysqli_fetch_array($querydiskon)){ ?>    
-            <tr>
-            <th scope="row"><?= $no++?></th>
-            <td align="center"><?=$data['nama'] ?></td>
-            <td align="center"><?=$data['nama_barang']?></td>
-            <td align="center"><?=$data['harga'] ?></td>
-            </tr>
-            <?php }  
-            ?>
+      <thead>
+    <tr>
+        <th scope="col" style="text-align: center;">No</th>
+        <th scope="col" style="text-align: center;">NAMA</th>
+        <th scope="col" style="text-align: center;">NAMA BARANG</th>
+        <th scope="col" style="text-align: center;">HARGA</th>
+    </tr>
+</thead>
+<tbody>
+    <?php
+    $no = 1;
+    $querydiskon = mysqli_query($conn, "SELECT * FROM view2");
+    while ($data = mysqli_fetch_array($querydiskon)) { ?>    
+        <tr>
+            <th scope="row" style="text-align: center;"><?= $no++ ?></th>
+            <td style="text-align: center;"><?= $data['nama'] ?></td>
+            <td style="text-align: center;"><?= $data['nama_barang'] ?></td>
+            <td style="text-align: center;"><?= $data['harga'] ?></td>
+        </tr>
+    <?php } ?>
+</tbody>
+
         </tbody>
      </table>
     </div>

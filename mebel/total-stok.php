@@ -28,19 +28,20 @@ require_once "../templat/sidebar.php";
         <thead>
             <tr>
                 <th scope="col">No</th>
-                <th scope="col"><center>Total Stok barang Mebel</center></th>
+             <th scope="col" style="text-align: center;">Total Stok barang Mebel</th>
+
                 
             </tr>
         </thead>
         <tbody>
         <?php
             $no =1;
-            $querymebel =mysqli_query($conn, "CALL GetTotalStok()");
+            $querymebel =mysqli_query($conn, "CALL GetTotalStokBarang()");
             while ($data =mysqli_fetch_array($querymebel)){ ?>  
             <tr>
             <th scope="row"><?= $no++?></th>
-            <td align="center"><?=$data['TotalStok'] ?></td>
-            <td align="center">
+           <td class="text-center"><?=$data['TotalStok'] ?></td>
+            <td class="text-center">
             </td>
             </tr>
             <?php }  

@@ -28,7 +28,7 @@ require_once "../templat/sidebar.php";
         <thead>
             <tr>
                 <th scope="col">No</th>
-                <th scope="col"><center>Total Stok barang elektronik</center></th>
+                <th scope="col">Total Stok barang elektronik</th>
                 
             </tr>
         </thead>
@@ -39,7 +39,7 @@ require_once "../templat/sidebar.php";
             while ($data =mysqli_fetch_array($queryelek)){ ?>  
             <tr>
             <th scope="row"><?= $no++?></th>
-            <td align="center"><?=$data['TotalStok'] ?></td>
+            <td="center"><?=$data['TotalStok'] ?></td>
             </tr>
             <?php }  
             ?>
